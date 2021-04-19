@@ -5,19 +5,16 @@ $(document).ready(function() {
 });
 
 function schedule(event) {
-            //prevent form from submitting and removing result
+    //prevent form from submitting and removing result
     event.preventDefault()
 
+    //Create variable for checked radio box
     var filtered = $('input[name=day]:checked').attr("id");
-    //var filtered = $('input[name=day]:checked');
 
-
-            //let day = $(this).is(":checked");
-            //switch statement to run through schedule for each day
-
-    //let day = $(this).val('');
+    //Declare variable for each radio button day and it's switch output
     let day = filtered;
 
+    //switch statement to run through schedule for each day
     switch (day) {
         case "Monday":
             $("p#schedule").text('am - work/visit customers; pm - class');
